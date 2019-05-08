@@ -1,0 +1,23 @@
+@charset "utf-8";
+$bg_url:url(../img/556ffa7b021b37316bfd2c3356022fcd.png);
+
+
+/* 右边顶部按钮 */
+.scroll{
+    width: 50px;
+    height: 60px;
+    position: fixed;
+    bottom: 100px;
+   right: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: none;
+    b{
+        display: inline-block;
+    background: $bg_url no-repeat -229px -243px;
+    width: 27px;
+    height: 39px;
+    margin: 12px;
+    }
+}

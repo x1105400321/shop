@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* 给大部分字体设置颜色和大小 */
+html,body{
+    color: #666;
+    font-size: 12px;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+
+@import "header";
+@import "banner";
+@import "pptm";
+@import "bkcx";
+@import "advertisement";
+@import "footer";
+@import "louti";
+@import "scroll";

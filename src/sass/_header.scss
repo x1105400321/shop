@@ -1,0 +1,626 @@
+@charset "utf-8";
+/* 精灵图链接 */
+$bg_url:url(../img/a75e8782863e3748a627deaddf81037a.png);
+$bg_url2:url(../img/23122da223a7da5293a116c8f07f19d6.png);
+$bg_url3:url(../img/556ffa7b021b37316bfd2c3356022fcd.png);
+/* 头部最上层的导航 */
+
+.header-bar{
+    height: 30px;
+    line-height: 30px;
+    background: #f2f2f2;
+}
+/* 导航中间的和盒子保持居中 */
+.header-bar-box{
+    width: 1000px;
+    margin: 0 auto;
+    text-indent: 18px;
+    position: relative;
+}
+/* 手机乐蜂 */
+.phone{
+    float: right;
+    padding: 0 0 0 10px;
+    background:$bg_url -527px -248px no-repeat;
+    cursor: pointer;
+    color: red;
+    position: relative;
+    
+}
+/* 手机小图标公用样式 */
+%phone-show-box{
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/* 手机鼠标移过时效果 */
+.phone-show{
+    display: none;
+    position: absolute;
+    right: -50px;
+    width: 171px;
+    height: 249px;
+    z-index: 10;
+    div{
+        position: absolute;
+        top: 28px;
+        border: 1px solid #dfdfdf;
+        width: 137px;
+        padding-top: 6px;
+        background: #fff;
+        left: -6px;
+        img{
+            width: 112px;
+        }
+        p{
+            .phone-show-pic1{
+                @extend %phone-show-box;
+                background: $bg_url -536px -285px no-repeat;
+            }
+            .phone-show-pic2{
+                @extend %phone-show-box;
+                background: $bg_url -536px -316px no-repeat;
+            }
+        }
+    }
+    span{
+        float: right;
+        padding: 0 0 0 10px;
+        background:#fff $bg_url -527px -248px no-repeat;
+        cursor: pointer;
+        color: red;
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 29px;
+       
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #dfdfdf;
+        right: 38px;
+        color: red;
+      
+    }
+
+}
+li:hover .phone-show{
+    display: block
+}
+/* 导航相同样式 */
+%bar{
+    float: right;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    text-indent: 0;
+}
+/* 收藏乐蜂 */
+.save{
+    @extend %bar;
+    margin-right: 10px;
+}
+/* 快速导航 */
+.fast{
+    @extend %bar;
+    position: relative;
+    padding-right: 10px;
+}
+/* 快速导航鼠标移过时效果 */
+.fast-show{
+    position: absolute;
+    display: none;
+    right: 224px;
+    top: 0;
+    height: 269px;
+    z-index: 10;
+    div{
+        position: absolute;
+        top: 29px;
+        border: 1px solid #dfdfdf;
+        width: 137px;
+        padding-top: 6px;
+        background: #fff;
+        a{
+           
+            float: left;
+            width: 66px;
+            height: 28px;
+            overflow: hidden;
+            color: #333;
+            text-indent: 12px;
+            cursor: pointer;
+                &:hover{
+                    color: red;
+                }
+        }
+        p{
+            width: 137px;
+            text-align: center;
+            height: 158px;
+            overflow: hidden;
+            color: #f52648;
+            text-indent: 15px;
+            img{
+                display: block;
+                margin: 12px auto 6px;
+                width: auto
+            
+            }
+            b{
+                display: block;
+            }
+        }
+    }
+    span{
+        top: 0;
+    width: 64px;
+    position: absolute;
+    left: 0;
+    
+    background: #fff;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    text-indent: 11px;
+    padding: 0 6px 0 0
+  
+    }
+}
+li:hover .fast-show{
+    display: block
+}
+/* 导航右侧图标 */
+i{
+    width: 8px;
+    height: 5px;
+    background: $bg_url2 -96px 0;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+}
+/* 我的订单 */
+.order{
+    @extend %bar;
+    position: relative;
+    padding-right: 10px;
+}
+/* 我的订单鼠标移过时效果 */
+.order-show{
+    right: 220px;
+    width: 77px;
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+    display: none;
+    top: 0;
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+    padding-bottom: 4px;
+    .order-show-firsta{
+      
+        &:hover{
+            color:red;
+        }
+    }
+    a{
+        display: block;
+        &:hover{
+            color:red;
+        }
+    }
+}
+li:hover .order-show{
+    display: block
+}
+/* 欢迎登陆注册 */
+.welcome{
+    @extend %bar;
+    a{
+        color:red;
+    }
+}
+.show-welcome{
+    @extend %bar;
+    display:none;
+    a{
+        color:red;
+    }
+}
+/* 左边地址区 */
+.address{
+    padding: 0 10px;
+    color: red;
+    position: relative;
+    i{
+        top: 5px
+    }
+}
+/* 地址鼠标滑过效果 */
+.send-select{
+    position: absolute;
+    left: 6px;
+    top: -1px;
+    min-width: 117px;
+    z-index: 100;
+    display: none;
+    /* 省份列表 */
+    ul{
+        width: 311px;
+        height: 216px;
+        overflow: hidden;
+        border: 1px solid #dfdfdf;
+        top: 29px;
+        padding: 15px 0 10px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        li{
+            float: left;
+            width: 58px;
+            text-indent: 22px;
+            a{
+                &:hover{
+                    color:red;
+                }
+            }
+        }
+    }
+    span{
+        background: #fff;
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 97px;
+        padding: 0 10px;
+        height: 29px;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #dfdfdf;
+        top: 1px;
+        text-indent: 0;
+    }
+}
+/* 送货框 */
+.songhuo{
+    width: 110px;
+}
+.songhuo:hover .send-select{
+display: block;
+}
+
+
+
+
+
+
+
+
+/* 搜索部分及下面的红色导航条 */
+/* 总体的属性 */
+.header-main{
+    position: relative;
+    width: 1000px;
+    height: 130px;
+    margin: 0 auto;
+}
+/* 左边的logo */
+.logo{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    a{
+        width: 180px;
+        height: 90px;
+        display: inline-block;
+        background: url(../img/254cacb8cb61853d797ed6e4c4a63d5c.gif) no-repeat;
+    }
+}
+/* 搜索框外部盒子 */
+.search{
+    float: left;
+    height: 60px;
+    margin: 30px 0 0 300px;
+    width: 400px;
+}
+/* 搜索框 */
+.input{
+    width: 400px;
+    height: 40px;
+    background: $bg_url2 0 -443px no-repeat;
+    margin-top: 10px;
+    position: relative;
+}
+/* 搜索框左边输入框 */
+.input-left{
+    width: 298px;
+    height: 27px;
+    padding: 3px 20px 5px 10px;
+   border: none;
+   position: absolute;
+   top: 2px;
+   left: 3px;
+}
+/* 输入框有焦点时去掉边框 */
+.input-left:focus{
+    outline: none
+}
+/* 搜索框右边按钮 */
+.input-right{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 70px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+/* 按钮点击时去掉边框 */
+.input-right:focus{
+    outline: none
+}
+/* 按钮下面的提示 */
+.input{
+    p{
+        width: 360px;
+        position: absolute;
+        top:40px;
+        text-indent: 16px;
+        margin-top: 5px;
+        a{
+            color: red;
+            margin-right: 3px;
+        }
+    }
+}
+/* 整个购物车 */
+.cart{
+    float: right;
+    position: relative;
+
+}
+/* 购物车表面显示的 */
+.cart-btn{
+    width: 136px;
+    height: 42px;
+    background: $bg_url2 0 -112px no-repeat;
+    cursor: pointer;
+    margin-top: 40px;
+    strong{
+        position: absolute;
+        right: 20px;
+        top: 53px;
+        color: white;
+        font-size: 14px;
+    }
+}
+/* 底部导航条 */
+.header-main-bar{
+    height: 40px;
+    background: rgb(221, 30, 46);
+    .header-main-bar-box{
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }    
+}
+/* 导航公用部分 */
+%header-main-bar{
+    width: 220px;
+    height: 40px;
+    float: left;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+
+/* 导航左侧 */
+.header-main-bar-left{
+   @extend %header-main-bar;
+    a{
+        color: white;
+        b{
+            width: 10px;
+            height: 6px;
+            background: $bg_url3 0 0 no-repeat;
+            display: inline-block; 
+        }
+    }
+}
+/* 二级导航 */
+.header-main-menu{
+    width: 220px;
+    background: white;
+    position: absolute;
+    top: 40px;
+    z-index: 20;
+    
+    dl{
+        position: relative;
+        float: left;
+        width: 100%;
+        
+        
+    }
+}
+/* 二级导航左边块状 */
+.header-main-menu-dt{
+    
+        position: relative;
+        float: left;
+        width: 189px;
+        padding: 10px 0 2px;
+        margin: 0 7px 0 14px;
+        line-height: 22px;
+        overflow: hidden;
+        height: 96px;
+        border-bottom: 1px solid #eee;
+        z-index: 20;
+        /* 主要分类 */
+        strong{
+            float: left;
+            line-height: 22px;
+            margin: 0 0 5px;
+            overflow: hidden;
+            color: #333;
+            display: block;
+        }
+        p{clear: both;
+            height: 72px;
+            padding: 0 0 0 5px;
+            line-height: 24px;
+            overflow: hidden;
+            a{
+                padding: 0 6px 0 0;
+                width: 30%;
+                color: #666;
+                line-height: 26px;
+                font-weight: 400;
+                font-size: 13px;
+                table-layout: fixed;
+                white-space: nowrap;
+                float: left;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    
+}
+.more-tip{
+    width: 100%;
+    transition: height .2s;
+    height: 33px;
+    overflow: hidden;
+    float: left;
+    line-height: 33px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    strong{
+        width: 23px;
+        height: 13px;
+        display: inline-block;
+        margin-top: 10px;
+        background: url(../img/downarrow.png) no-repeat;
+    }
+}
+.all{
+    width: 100%;
+    transition: height .2s;
+    height: 33px;
+    overflow: hidden;
+    float: left;
+    line-height: 33px;
+    color: #999!important;
+    font-size: 12px;
+    text-align: center;
+}
+/* 右边鼠标移入才出现区域 */
+.header-main-menu-dd{
+    
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 220px;
+        background: #fff;
+        color: #000;
+        box-shadow: 2px 2px 3px #999;
+        width: 692px;
+        padding: 0 0 20px;
+        height:200px;
+        ul{
+            float: left;
+            width: 316px;
+            margin: 10px 5px 0 20px;
+            line-height: 24px;
+            overflow: hidden;
+
+            li{
+                margin: 0 0 5px;
+                display: inline-block;
+                strong{
+                    width: 70px;
+                   
+                    margin: 0 0 7px;
+                    float: left;
+                    a{
+                    color: #000;
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: 33px;
+                        
+                    }
+                }
+                p{
+                    
+                    width: 240px;
+                    border-bottom: 1px dotted #ccc;
+                    float: left;
+                    padding: 4px 0 6px;
+                    a{
+                        margin: 0 14px 0 0;
+                        line-height: 25px;
+                        display: inline-block;
+                        font-weight: 400;
+                        font-size: 13px;
+                        color: #999;
+                    }
+                }
+            }
+        }
+    
+}
+/* 两个暂时不可见的dl */
+.header-main-menu-dl{
+    display: none;
+    height:0;
+    
+    transition:height 2s;
+}
+/* 查看全部分类 */
+.all{
+    display: none;
+
+}
+/* 鼠标移入出现 */
+.header-main-menu:hover .header-main-menu-dl{
+    display: block;
+height:109px;
+}
+/* 鼠标移入查看全部分类出现 */
+.header-main-menu:hover .all{
+    display: block;
+    }
+/* 下箭头消失 */
+.header-main-menu:hover .more-tip{
+    display: none;
+}
+/* 移入效果 */
+dl:hover .header-main-menu-dd{
+    display: block;
+}
+/* 导航中间 */
+.header-main-bar-center{
+    height: 40px;
+    float: left;
+    a{
+        @extend %header-main-bar;
+    }
+}
+/* 导航右边三个图片 */
+.header-main-bar-right{
+    float:right;
+    @for $i from 1 through 3{
+        .header-logo#{$i}{
+            display: inline-block;
+            width: 23px;
+            height: 25px;
+            margin: 7px;
+            background: $bg_url2 -73px - $i * 23 -13px no-repeat; 
+        }
+    }
+}

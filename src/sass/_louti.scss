@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* 精灵图 */
+$bg_url:url(../img/556ffa7b021b37316bfd2c3356022fcd.png);
+/* 楼梯 */
+%louti-box{
+    width: 67px;
+    height: 75px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 67px;
+    cursor: pointer;
+}
+.louti{
+    width: 144px;
+    position: fixed;
+    left:0;
+    top: 30%;
+    display: none;
+    /* 楼梯顶部 */
+    .louti-top{
+    width: 144px;
+    height: 208px;
+    background: $bg_url -118px -24px;
+    position: relative;
+    }
+    /* 楼梯下半部分 */
+    .louti-bottom1{
+           @extend %louti-box;
+            background: $bg_url -67px -306px no-repeat; 
+    }
+    .louti-bottom2{
+            @extend %louti-box;
+             background: $bg_url 0 -381px no-repeat; 
+    }
+    
+}

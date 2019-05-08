@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* 总样式 */
+html, body {
+    color: #666;
+    font-size: 12px;
+  }
+  
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  /* 引入头部样式 */
+@import "header";
+/* 顶部回到首页 */
+$login_url:url(../img/login-icon5.jpg);
+.home{
+    margin: 0 40px 0 0;
+    cursor: pointer;
+    text-indent: 0;
+    float: right;
+}
+
+/* 乐蜂网logo */
+.login-logo{
+    height: 100px;
+    width: 100%;
+    padding-top: 20px;
+    background: #fbe1d4;
+    .login-logo-box{
+        width: 1000px;
+        margin: 0 auto;
+        a{
+            display: block;
+            width: 170px;
+            height: 90px;
+            background: url(../img/new-logo.png) no-repeat;
+            margin: 10px 0 0 10px; 
+        }
+    }
+}
+/* 表单验证背景图 */
+.login-main{
+    
+    width: 100%;
+    height: 700px;
+    background:#fbe1d4 url(../img/login-bk.jpg) no-repeat center top;
+   /* 中间盒子让内容居中 */
+    .login-main-box{
+        width: 1000px;
+        margin: 0 auto; 
+       
+        /* 表单验证盒子 */
+        .input-box{
+            margin-top: 20px;
+            float: right;
+            background: #fff;
+            padding-bottom: 20px;
+            width: 420px;
+            position: relative;
+            box-shadow: #ccc 0px 0px 5px;
+            border-radius: 8px;
+            /* 表单验证标题 */
+            .login-title{
+                height: auto;
+                padding: 25px 60px 0 60px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+/* 登录文字 */
+.denglu{
+    background:$login_url 0 -158px;
+    width: 100px;
+    height: 36px;
+    float: left;
+}
+/* 注册文字 */
+.zhuce{
+    float: right;
+    a{
+        font-size:14px;
+        color:#02b1cb;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+/* input主题部分 */
+.login-body{
+    padding: 0 60px;
+    position: relative;
+    margin-top: 35px;
+    /* 用户名 */
+    .login-body-phone{
+        height: 85px;
+        width: 300px;
+        clear: both;
+        /* 用户名提示文字 */
+        h2{
+            font-weight: 500;
+            line-height: 24px;
+           
+        }
+        /* 表单 */
+        input{
+            width: 278px;
+            height: 33px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 33px;
+            color: #666;
+            padding: 0 10px;
+        }
+    }
+    /* 密码 */
+    .login-body-password{
+        height: 85px;
+        width: 300px;
+        clear: both;
+        h2{
+            font-weight: 500;
+            line-height: 24px;
+           float: left;
+        }
+        .forget{
+            float: right;
+            color: #02b1cb;
+        }
+        input{
+            width: 278px;
+            height: 33px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 33px;
+            color: #666;
+            padding: 0 10px;
+        }
+    }
+    .login-body-password-again{
+        height: 85px;
+        width: 300px;
+        clear: both;
+        h2{
+            font-weight: 500;
+            line-height: 24px;
+           float: left;
+        }
+        .forget{
+            float: right;
+            color: #02b1cb;
+        }
+        input{
+            width: 278px;
+            height: 33px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 33px;
+            color: #666;
+            padding: 0 10px;
+        }
+    }
+    /* 验证码 */
+    .login-body-yzm2{
+        height: 85px;
+        width: 300px;
+        clear: both;
+        
+        h2{
+            font-weight: 500;
+            line-height: 24px;
+           
+        }
+        /* 表单 */
+        input{
+            width: 125px;
+            height: 33px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 33px;
+            color: #666;
+            padding: 0 10px;
+        }
+        /* 右边验证码 */
+        span{
+            display: inline-block;
+            height: 42px;
+            /* 文字及验证码图片 */
+            a{
+                height: 40px;
+                color: #a0a0a0;
+                text-decoration: underline;
+                display: inline-block;
+                margin-left: 4px;
+                vertical-align: top;
+                img{
+                    height: 40px;
+                    width: 85px;
+                }
+            }
+        }
+    }
+    /* 短信验证码 */
+    .login-body-dxyzm{
+        height: 85px;
+        width: 300px;
+        clear: both;
+        
+        h2{
+            font-weight: 500;
+            line-height: 24px;
+           
+        }
+        /* 表单 */
+        input{
+            width: 125px;
+            height: 33px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 33px;
+            color: #666;
+            padding: 0 10px;
+        }
+        /* 右边验证码 */
+        span{
+            display: inline-block;
+            height: 42px;
+            /* 文字 */
+            input{
+                border: 1px solid #ff7c91;
+                background: #ffaebb;
+                color: #fff;
+                border-radius: 8px;
+                box-shadow: #ccc 0px 0px 5px;
+                cursor: pointer;
+                margin-left: 10px;
+                &:hover{
+                    background: #ff7c91;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    /* 登录按钮 */
+    .login-body-login-btn{
+    margin-top: 15px;
+    height: 40px;
+    margin-bottom: 15px;
+    width: 300px;
+    clear: both;
+        input{
+            border:0;
+            width: 300px;
+            height: 40px;
+            display: block;
+            background: $login_url 0 -262px no-repeat;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 38px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    /* 下方合作伙伴 */
+    .login-body-partner{
+            position: relative;
+            width: 300px;
+            clear: both;
+            border-top: 1px solid #eceae6;
+            margin: 20px 0 0 0;
+            padding: 30px 0 0 0;
+            height: auto ;
+            span{
+                width: 150px;
+                color: #666;
+                line-height: 50px;
+                display: block;
+                float: left;
+                strong{
+                    background:$login_url -303px bottom;
+                    width: 26px;
+                    height: 24px;
+                    vertical-align: middle;
+                    display:inline-block;
+                }
+               b{
+                    background:$login_url -120px bottom;
+                    width: 26px;
+                    height: 24px;
+                    vertical-align: middle;
+                    display:inline-block;
+                }
+            }
+    }
+}
+
+
+
+
+/* 引入底部样式 */
+@import "footer";

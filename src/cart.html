@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车_乐蜂网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header></header>
+    <!-- 购物车头部logo区域 -->
+    <div class="cart-header">
+        <div class="cart-header-box">
+            <div class="cart-logo">
+                <a href="#"></a>
+            </div>
+            <div class="cart-step">
+
+            </div>
+        </div>
+    </div>
+    <!-- 购物车主体部分 -->
+    <div class="cart-content">
+        <div class="cart-content-top">
+            <b class="time-pic"></b>
+            请在
+            <b class="time"></b>
+            内提交订单，下单后您另有30分钟的支付时间。
+        </div>
+        <div class="cart-content-middle">
+                <div class="cart-content-middle-header">
+                    <table>
+                        <tr>
+                            <th class="cart-information">商品信息</th>
+                            <th class="cart-price">单价</th>
+                            <th class="cart-num">数量</th>
+                            <th class="cart-sum">小计</th>
+                            <th class="cart-operation">操作</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cart-content-middle-item">
+                    <table>
+                        <tr class="item-hide" style="display: none;">
+                            <td class="cart-information1">
+                                <div class="cart-information1-pic">
+                                    <a href="#">
+                                        <img src="http://a2.vimage1.com/upload/merchandise/pdc/825/349/302943678710349825/2/6930420068134-5.jpg" alt="">
+                                    </a>
+                                </div> 
+                                <div class="cart-information1-info">
+                                    <div class="cart-information1-info-name">
+                                        <a href="#">悦享鲜萃面膜 6P (多款可选)</a>
+                                    </div>
+                                    <div class="cart-information1-info-size">规格:均码</div>
+                                </div>
+                            </td>
+                            <td class="cart-price1">
+                                <span class="now-price">￥<strong>45</strong></span>
+                                <span class="last-price">￥<b>45</b></span>
+                            </td>
+                            <td class="cart-num1">
+                                <div class="quantity">
+                                    <span class="quantity-l">-</span>
+                                    <a href="#" class="quantity-l-a">-</a>
+                                    <input type="text">
+                                    <span class="quantity-r">+</span>
+                                    <a href="#" class="quantity-r-a">+</a>
+                                </div>
+                            </td>
+                            <td class="cart-sum1">
+                                <span class="cart-sum1-price">
+                                    ￥<strong>90</strong>
+                                </span>
+                            </td>
+                            <td class="cart-operation1">
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cart-content-middle-footer">
+                    <p>
+                        <span>运费</span>
+                        全场满99包邮
+                    </p>
+                </div>
+        </div>
+        <div class="cart-content-bottom">
+            <div class="cart-jiesuan">结算</div>
+            <div class="cart-money">
+                    <div class="cart-money-pay">
+                        <span class="cart-money-num">
+                            共<b>1</b>件商品 商品金额
+                        </span>
+                        <span class="cart-money-sum">
+                            ￥<strong>299</strong>
+                        </span>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="script/js/cookie.js"></script>
+    <script src="script/js/cart.js"></script>
+    <script>
+        $('header').load('index.html .header-bar');
+        $('footer').load('index.html .footer-bottom')
+    </script>
+</body>
+</html>

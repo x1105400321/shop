@@ -1,0 +1,80 @@
+@charset "utf-8";
+/*  公用部分盒子*/
+%pptm-box{
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+/* 精灵图地址 */
+$bg_url:url(../img/556ffa7b021b37316bfd2c3356022fcd.png);
+/* 品牌特卖顶部分类标题 */
+.pptm-top{
+ @extend %pptm-box;
+ border-bottom: 2px solid #f99c17;
+    b{
+        width: 118px;
+        height: 40px;
+        display: inline-block;
+        background: $bg_url 0 -64px no-repeat;
+        margin-right: 20px;
+    }
+    span{
+        font-size: 18px;
+        strong{
+            color: red;
+            font-weight: normal;
+        }
+    }
+    a{
+        float: right;
+        margin-top: 20px
+    }
+}
+
+/* 品牌特卖中间内容部分外框 */
+.pptm-content{
+    @extend %pptm-box;
+    width: 1008px;   
+}
+/* 品牌特卖中间内容部分 */
+.pptm-content-item{
+    position: relative;
+    float: left;
+    width: 492px;
+    margin: 0 6px 20px;
+    a{
+        img{
+            width: 100%;
+            height: 216px;
+            border-radius: 3px;
+            transition: box-shadow .2s;
+            &:hover{
+                box-shadow: 0 0 10px #999;
+            }
+        }
+        
+    }
+    p{
+        span{
+            color:red;
+        }
+        font-size: 14px;
+        line-height: 21px;
+        height: 21px;
+        padding: 12px 8px 2px;
+    }
+}
+/* 品牌特卖下方广告内容部分 */
+.pptm-bottom{
+    @extend %pptm-box;
+    img{
+        width: 100%;
+        height: 216px;
+        border-radius: 3px;
+        transition: box-shadow .2s;
+        &:hover{
+            box-shadow: 0 0 10px #999;
+        }
+    }
+}

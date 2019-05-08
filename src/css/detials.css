@@ -1,0 +1,400 @@
+@charset "UTF-8";
+/* 给大部分字体设置颜色和大小 */
+html, body {
+  color: #666;
+  font-size: 12px;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* 上方标题 */
+.detials {
+  width: 100%;
+  background: #eee;
+  position: relative;
+  z-index: 30;
+}
+.detials .detials-main {
+  /* 外部盒子 */
+  width: 1002px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  /* 内部标题 */
+}
+.detials .detials-main .detials-main-title {
+  line-height: 60px;
+  color: red;
+  text-indent: 0;
+  font-size: 13px;
+  height: 60px;
+}
+.detials .detials-main .detials-main-title b {
+  font-weight: normal;
+}
+
+/* 主要内容区域 */
+.detials-main-content {
+  width: 1000px;
+  height: 600px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 20;
+  background: #fff;
+  /* 商品名字及功能介绍 */
+  /* 下面商品主要部分 */
+}
+.detials-main-content dd {
+  /* 加粗文字 */
+  /* 普通文字 */
+}
+.detials-main-content dd h1 {
+  width: 600px;
+  padding: 20px 0 0 29px;
+  color: #333;
+  overflow: hidden;
+  height: 22px;
+  font-size: 20px;
+}
+.detials-main-content dd p {
+  width: 600px;
+  height: 54px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0 0 0 29px;
+  color: #999;
+  overflow: hidden;
+}
+.detials-main-content dt {
+  position: relative;
+  width: 1000px;
+  clear: both;
+}
+
+/* 商品图片 */
+.detials-main-content-left {
+  position: relative;
+  height: 347px;
+  width: 600px;
+  border: 1px solid #eee;
+  margin-left: 29px;
+  /* 图片下方描述 */
+  /* 分享文字及图表 */
+}
+.detials-main-content-left img {
+  display: block;
+  max-width: 600px;
+  max-height: 347px;
+  margin: 0 auto;
+}
+.detials-main-content-left .tag {
+  position: relative;
+  left: 0;
+  top: 20px;
+  padding-left: 29px;
+  display: inline-block;
+  width: 500px;
+}
+.detials-main-content-left .tag span {
+  height: 22px;
+  padding: 0 10px;
+  line-height: 22px;
+  text-align: center;
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+.detials-main-content-left .share {
+  position: absolute;
+  right: 10px;
+  bottom: -40px;
+  line-height: 27px;
+  overflow: visible;
+}
+.detials-main-content-left .share .share-content {
+  float: right;
+  /* 分享图表 */
+}
+.detials-main-content-left .share .share-content b {
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  background: url(../img/de.png) -179px -382px;
+  vertical-align: -2px;
+}
+
+/* 右边价格区域 */
+.detials-main-content-right {
+  position: absolute;
+  top: 0;
+  left: 660px;
+  width: 310px;
+  height: 380px;
+  border-top: 1px dotted #ccc;
+  padding-top: 5px;
+}
+
+/* 价格区域 */
+.price {
+  position: relative;
+  height: 55px;
+  margin-top: 20px;
+  /* 价格文字 */
+  /* 钱的符号 */
+  /* 具体价钱 */
+  /* 打折 */
+  /* 原价 */
+}
+.price .price-title {
+  display: inline-block;
+  width: 70px;
+  font-size: 13px;
+  line-height: 25px;
+}
+.price .fuhao {
+  color: red;
+}
+.price .money {
+  font-size: 32px;
+  padding-left: 5px;
+  color: red;
+}
+.price .count {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  padding: 1px 3px;
+  margin-left: 10px;
+  vertical-align: super;
+}
+.price .under {
+  color: #999;
+  font-size: 13px;
+  text-decoration: line-through;
+  margin-left: 20px;
+}
+
+/* 优惠 */
+.youhui {
+  overflow: hidden;
+  padding-bottom: 20px;
+  /* 包邮 */
+}
+.youhui .baoyou {
+  float: right;
+  width: 240px;
+}
+.youhui .baoyou .baoyou-content {
+  height: 27px;
+  line-height: 27px;
+  color: #666;
+  float: left;
+  width: 100%;
+  font-size: 12px;
+  overflow: hidden;
+  margin-bottom: 3px;
+  /* 包邮图片 */
+}
+.youhui .baoyou .baoyou-content b {
+  display: inline-block;
+  width: 39px;
+  margin: 0 10px 0 5px;
+  vertical-align: middle;
+  font-style: normal;
+  color: #fff;
+  height: 23px;
+  background: url(../img/dazhe.png) -117px 0 no-repeat;
+}
+
+/* 购买数量 */
+.sum {
+  width: 310px;
+  padding: 25px 0 10px;
+  border-top: 1px dotted #ccc;
+  /* 购买文字 */
+  /* 加减号 */
+}
+.sum .sum-buy {
+  float: left;
+  width: 60px;
+  line-height: 25px;
+  font-size: 13px;
+}
+.sum .sum-num {
+  float: left;
+  width: 103px;
+  height: 25px;
+  margin-left: 15px;
+  background: url(../img/c5725c705040cb114adade487b33a3cf.png) no-repeat -204px -181px;
+}
+.sum .sum-num .sum-num-down {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border: 0 none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.sum .sum-num input {
+  width: 34px;
+  height: 20px;
+  border: 0 none;
+  padding: 0 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+.sum .sum-num .sum-num-up {
+  display: inline-block;
+  border: 0 none;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* 加入购物车 */
+.car {
+  display: inline-block;
+  margin-top: 20px;
+}
+.car b {
+  width: 176px;
+  height: 45px;
+  display: block;
+  background: url(../img/c5725c705040cb114adade487b33a3cf.png) no-repeat -145px 0;
+  overflow: hidden;
+  margin-top: 10px;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* 放大镜 */
+.wrap {
+  float: left;
+  position: relative;
+  margin-left: 30px;
+}
+
+/*  */
+#spic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+  float: left;
+  position: relative;
+}
+
+#spic img {
+  width: 400px;
+  height: 400px;
+}
+
+/* 小放大镜 */
+#sf {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  opacity: 0.3;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  visibility: hidden;
+}
+
+/* 大放大镜 */
+#bf {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #000;
+  overflow: hidden;
+  position: absolute;
+  left: 410px;
+  visibility: hidden;
+  z-index: 100;
+}
+
+#bf img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 800px;
+  height: 800px;
+}
+
+/* 下面的小图片 */
+#ulist {
+  position: absolute;
+  left: 0px;
+  top: 430px;
+  width: 402px;
+  height: 56px;
+  overflow: hidden;
+}
+
+/* 左右切换按钮 */
+#ulist a {
+  float: left;
+  width: 10px;
+  height: 54px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  line-height: 56px;
+  text-align: center;
+  background: #fff;
+}
+
+/* 切换按钮中间图片列表 */
+#list {
+  float: left;
+  margin-left: 18px;
+  width: 372px;
+  position: relative;
+}
+
+.wrap ul {
+  list-style: none;
+  float: left;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.wrap ul li {
+  float: left;
+  width: 56px;
+  height: 56px;
+  padding-right: 6px;
+}
+
+/* 下面小图片 */
+.wrap ul li img {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #ccc;
+}
+
+/* 左切换 */
+#right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #333;
+}
+
+/* 右切换 */
+#left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  color: #fff;
+}
+
+/*# sourceMappingURL=detials.css.map */
