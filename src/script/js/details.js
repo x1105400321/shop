@@ -135,7 +135,7 @@
 		}
 		$(this).parents('.sum-num').find('input').val($count);//赋值回去
 	
-	   setcookie($(this));//将改变的数量重新添加到cookie
+	//    setcookie($(this));//将改变的数量重新添加到cookie
 	
 	});
 	
@@ -149,29 +149,12 @@
 	    $(this).parents('.sum-num').find('input').val($count);
 	   
 	   
-	    setcookie($(this));
+	    // setcookie($(this));
 	});
 	
-	//直接输入改变数量
-	$('.sum-num input').on('input', function() {
-	    var $reg = /^\d+$/g; //只能输入数字
-	    var $value = parseInt($(this).val());
-	    if ($reg.test($value)) {//是数字
-	        if ($value >= 99) {//限定范围
-	            $(this).val(99);
-	        } else if ($value <= 0) {
-	            $(this).val(1);
-	        } else {
-	            $(this).val($value);
-	        }
-	    } else {//不是数字
-	        $(this).val(1);
-	    }
-	    setcookie($(this));
-	});
 	
 
-
+	
 
 
 
@@ -204,5 +187,21 @@
 			addcookie('cookienum', arrnum.toString(), 10); //数组存入cookie
 		}
 	});
+
+	$('.car').on('click',function(){
+		$('.success').css({
+			display:'block'
+		})
+	})
+	$('.continue').on('click',function(){
+		$('.success').css({
+			display:'none'
+		})
+	})
+
+
+
+
+
 
 }();

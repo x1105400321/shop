@@ -7,7 +7,7 @@
 		}).done(function(data){
 			$.each(data,function(index,value){
                 if(id==value.sid){//遍历判断sid和传入的sid是否相同，方便将那条数据设置到渲染的商品列表中。
-                    console.log(value);
+                    console.log(id);
 					var $clonebox=$('.item-hide:hidden').clone(true,true);
 					$clonebox.find('.cart-information1-pic').find('img').attr('src',value.url);
 					$clonebox.find('.cart-information1-pic').find('img').attr('sid',value.sid);

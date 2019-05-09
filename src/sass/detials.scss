@@ -9,12 +9,34 @@ a{
     text-decoration: none;
 }
 $bg_url:url(../img/de.png);
+
+
+
+
+
+/* 引入index头部 */
+.songhuo{
+    display:none;
+}
+.header-main-menu{
+display: none;
+
+}
+.header-main-bar-left{
+   background:#dd1e2e;;
+    &:hover{
+        background: #d62340;
+    }
+}
+.header-main-bar-left:hover .header-main-menu{
+display: block;
+}
 /* 上方标题 */
 .detials{
     width: 100%;
     background: #eee;
     position: relative;
-    z-index: 30;
+    // z-index: 30;
     .detials-main{
         /* 外部盒子 */
         width: 1002px;
@@ -42,7 +64,7 @@ $bg_url:url(../img/de.png);
     height: 600px;
     margin-bottom: 15px;
     position: relative;
-    z-index: 20;
+    // z-index: 20;
     background: #fff;
     /* 商品名字及功能介绍 */
     dd{
@@ -385,4 +407,46 @@ $bg_url:url(../img/de.png);
     z-index: 2;
     color: #fff;
 }
-
+/* 加入购物车 */
+.success{
+    position: fixed;
+    z-index: 1001;
+    display: none;
+    width: 400px;
+    padding: 100px 10px;
+    border: 1px solid #e2d3aa;
+    overflow: visible;
+    border-radius: 8px;
+    left: 50%;
+    top: 50%;
+    margin-left: -264px;
+    margin-top: -125px;
+    padding: 10px 0 0 150px;
+    overflow: hidden;
+    background: #fff;
+    color: #999;
+    h3{
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 35px;
+        color: #333;
+    }
+    p{
+        line-height:45px;
+        a{
+            color:red;
+        }
+        .go-pay{
+            margin: 2px 15px 5px 0;color: #000;
+            vertical-align: middle;
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            text-align: center;
+            width: 110px;
+            text-indent: -9999px;
+            background: url(../img/jiesuan.png);
+        }
+    }
+}

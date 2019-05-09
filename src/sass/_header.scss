@@ -420,6 +420,7 @@ display: block;
 /* 导航左侧 */
 .header-main-bar-left{
    @extend %header-main-bar;
+   background-color:#d62340;
     a{
         color: white;
         b{
@@ -609,6 +610,10 @@ dl:hover .header-main-menu-dd{
     float: left;
     a{
         @extend %header-main-bar;
+        
+        &:hover{
+            background-color: #d62340;
+        }
     }
 }
 /* 导航右边三个图片 */
