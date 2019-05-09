@@ -118,6 +118,67 @@
 			arrnum = getcookie('cookienum').split(','); //cookie商品的num
 		}
 	}
+	function setcookie(obj) { //obj:当前操作的对象
+		cookietoarray();//得到数组
+		var $index = obj.parents('.detials-main-content').find('#smallpic').attr('sid');//通过id找数量的位置
+		
+	    arrnum[$.inArray($index,arrsid)] = obj.parents('.detials-main-content').find('.sum-num input').val();
+	    addcookie('cookienum', arrnum.toString(), 7);
+	}
+
+	//改变商品数量++
+	$('.sum-num-up').on('click', function() {
+	    var $count = $(this).parents('.sum-num').find('input').val();//值
+	    $count++;
+	    if ($count >= 99) {
+	        $count = 99;
+		}
+		$(this).parents('.sum-num').find('input').val($count);//赋值回去
+	
+	   setcookie($(this));//将改变的数量重新添加到cookie
+	
+	});
+	
+	// 改变商品数量--
+	$('.sum-num-down').on('click', function() {
+	    var $count = $(this).parents('.sum-num').find('input').val();
+	    $count--;
+	    if ($count <= 1) {
+	        $count = 1;
+	    }
+	    $(this).parents('.sum-num').find('input').val($count);
+	   
+	   
+	    setcookie($(this));
+	});
+	
+	//直接输入改变数量
+	$('.sum-num input').on('input', function() {
+	    var $reg = /^\d+$/g; //只能输入数字
+	    var $value = parseInt($(this).val());
+	    if ($reg.test($value)) {//是数字
+	        if ($value >= 99) {//限定范围
+	            $(this).val(99);
+	        } else if ($value <= 0) {
+	            $(this).val(1);
+	        } else {
+	            $(this).val($value);
+	        }
+	    } else {//不是数字
+	        $(this).val(1);
+	    }
+	    setcookie($(this));
+	});
+	
+
+
+
+
+
+
+
+
+
 	
 	//2.有了上面的方法，可以点击加入购物车按钮判断商品是否是第一次还是多次。
 	
