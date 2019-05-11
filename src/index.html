@@ -698,7 +698,23 @@
         </div>
     </header>
     <!-- 大广告图 -->
-    <div class="banner"></div>
+    <div class="banner">
+        <div class="lunboimg">
+            <ul class="lunboul">
+            <li> <a href="#"><img src="https://img11.360buyimg.com/img/jfs/t1/42760/21/3803/82524/5ccff33eEfa92c11a/39c341030ad9a174.jpg"></a></li>
+            <li><a href="#"><img src="https://img11.360buyimg.com/img/jfs/t1/48764/7/232/93303/5cd3e16fE2a25afa9/3880f11a4721f494.jpg" alt=""></a></li>
+			<li><a href="#"><img src="https://img13.360buyimg.com/img/jfs/t1/42197/18/4551/84357/5cd3ecf3Ec3aba890/42970e7341fd4385.jpg" alt=""></a></li>
+			<li><a href="#"><img src="https://img20.360buyimg.com/img/jfs/t1/72713/38/20/65180/5cd28141E71c819e0/bb0d80062a186660.jpg" alt=""></a></li>
+            </ul>
+            <ol class="lunbool">
+                <li class="active">母亲节</li>
+                <li>啤酒</li>
+                <li>女性护理</li>
+                <li>爱慕</li>
+           
+            </ol>
+        </div>
+    </div>
     <!-- 品牌特卖 -->
     <div class="pptm louceng">
         <!-- 顶部主要分类标题 -->
@@ -1051,9 +1067,67 @@
 			});
     });
     
-    
+    /* 轮播图 */
+    /* 获取元素 */
+    /* 整个banner盒子 */
+    var $ban = $('.banner');
+    /* 轮播图片列表 */
+    var $picUl = $('.lunboul');
+    /* 每张轮播图片 */
+    var $picLi =$('.lunboul li');
+    /* 轮播按钮列表 */
+    var $btnOl=$('lunbool');
+    /*  轮播按钮*/
+    var $btnLi = $('.lunbool li');
+    var $num = 0;
+    var $timer = null;
+    var $lunbo = null;
+    /* 点击按钮图片变化 */
+    $btnLi.on('click',function(){
+        $num = $(this).index();
+        $(this).addClass('active').siblings('li').removeClass('active');
+        var $picLiNow = $picLi.eq($(this).index());
+        $picLiNow.animate({
+            zIndex: 1,
+            opacity:1
+        },666).siblings().animate({
+            zIndex:0,
+            opacity:0
 
+        },666);
+    })
+    /* 定时器设置自动播放函数 */
+    $lunbo = function(){
+        
+        $num++;
+        if($num<4){
+            $num =$num;
+        }else{
+            $num=0;
+          
+        };
+        $btnLi.eq($num).addClass('active').siblings().removeClass('active');
+            $picLi.eq($num).animate({
+            zIndex: 1,
+            opacity:1
+        },666).siblings().animate({
+            zIndex:0,
+            opacity:0
 
+        },666);
+
+        
+    }
+
+        /*设置定时器 */
+    $timer = setInterval($lunbo, 2000);
+        /* 移入移出开关定时器 */
+        $picUl.hover(function(){
+           clearInterval($timer);
+        },function(){
+    $timer = setInterval($lunbo, 2000);
+            
+        })
 }();
 
 

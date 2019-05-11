@@ -646,9 +646,60 @@ dl:hover .header-main-menu-dd {
   background: url(../img/23122da223a7da5293a116c8f07f19d6.png) -142px -13px no-repeat;
 }
 
+/* lunbotu轮播图大框 */
 .banner {
+  width: 100%;
   height: 360px;
-  background: red;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.lunboimg {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+/* 轮播图片框 */
+.lunboul {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.lunboul li {
+  width: 100%;
+  height: 360px;
+  float: left;
+  position: absolute;
+  z-index: 1;
+}
+
+.lunbool {
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  bottom: 10px;
+  z-index: 10;
+}
+.lunbool li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  color: black;
+  background: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10;
+  line-height: 40px;
+}
+.lunbool .active {
+  background: #333 !important;
+  color: white;
 }
 
 /*  公用部分盒子*/
