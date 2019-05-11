@@ -6,9 +6,50 @@ var $address = $('.songhuo .address strong');
 var $send=$('.send-select ul li a');
 /* 地区切换效果 */
     $send.on("mousedown",function(){     
-        var $sendValue = this.text;
+        var $sendValue = $(this).text();
         $address.text($sendValue);
+        $('.send-select').css({
+            display:'none'
+        })
     });
+    /* 地址栏hover效果 */
+    $('.songhuo').hover(function(){
+        $('.send-select').css({
+            display:'block'
+        })
+    },function () {
+        $('.send-select').css({
+            display:'none'
+        })
+      })
+    /* 黑幕的隐藏与显示 */
+    var $city = $('.mask-address-body dl dt a');
+
+    $city.hover(function(){
+        $(this).css({
+            background: "#ddd6c8",
+            color: "#fff",
+            borderRadius: 5,
+        })
+    },function(){
+        $(this).css({
+            background: "",
+            color: "#666",
+            borderRadius: 5,
+        })
+    });
+    $city.on('mousedown',function () { 
+        var $cityValue = $(this).text();
+        $address.text($cityValue);
+        $('.mask').css({
+            display:"none"
+        });
+        $('.mask-address').css({
+            display:"none"
+        });
+     })
+
+
 })(jQuery);
 
 /* 楼梯效果及回到顶部效果 */

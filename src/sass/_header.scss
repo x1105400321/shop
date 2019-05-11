@@ -187,7 +187,7 @@ i{
 /* 我的订单鼠标移过时效果 */
 .order-show{
     right: 220px;
-    width: 77px;
+    width: 70px;
     position: absolute;
     background: #fff;
     z-index: 10;
@@ -196,8 +196,11 @@ i{
     overflow: hidden;
     border: 1px solid #dfdfdf;
     padding-bottom: 4px;
+    text-indent: 5px;
     .order-show-firsta{
-      
+      i{
+          right:2px;
+      }
         &:hover{
             color:red;
         }

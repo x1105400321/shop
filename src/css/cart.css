@@ -2,71 +2,84 @@
 /* 给大部分字体设置颜色和大小 */
 html, body {
   color: #666;
-  font-size: 12px; }
+  font-size: 12px;
+}
 
 a {
   color: #666;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* 引入index头部 */
 .songhuo {
-  display: none; }
+  display: none;
+}
 
 /* 购物车头部 */
 .cart-header {
   width: 100%;
   height: 98px;
   border-bottom: 2px solid #f52648;
-  /* 中间盒子 */ }
+  /* 中间盒子 */
+}
 .cart-header .cart-header-box {
   width: 1000px;
   height: 98px;
   margin: 0 auto;
   overflow: hidden;
   /* 商城logo */
-  /* 右边进度图图片 */ }
+  /* 右边进度图图片 */
+}
 .cart-header .cart-header-box .cart-logo {
   width: 175px;
   height: 98px;
-  float: left; }
+  float: left;
+}
 .cart-header .cart-header-box .cart-logo a {
   width: 175px;
   height: 98px;
   background: url(../img/cart-logo.png) no-repeat;
-  display: block; }
+  display: block;
+}
 .cart-header .cart-header-box .cart-step {
   float: right;
   width: 487px;
   height: 98px;
-  background: url(../img/e33adef239983ef3a761fe92b3a3bbdf.jpg) no-repeat 0 8px; }
+  background: url(../img/e33adef239983ef3a761fe92b3a3bbdf.jpg) no-repeat 0 8px;
+}
 
 /* 购物车主要部分 */
 .cart-content {
   width: 1000px;
   margin: 0 auto;
-  /* 购物车头部提示信息 */ }
+  /* 购物车头部提示信息 */
+}
 .cart-content .cart-content-top {
   height: 56px;
   line-height: 56px;
-  /* 购物车头部图片 */ }
+  /* 购物车头部图片 */
+}
 .cart-content .cart-content-top .time-pic {
   width: 11px;
   height: 15px;
   display: inline-block;
   vertical-align: middle;
   margin: 0 5px;
-  background: url(../img/tiem.jpg) no-repeat; }
+  background: url(../img/tiem.jpg) no-repeat;
+}
 
 /* 购物车主体 */
 .cart-content-middle {
-  /* 商品信息部分 */ }
+  /* 商品信息部分 */
+}
 .cart-content-middle .cart-content-middle-header {
   height: 36px;
   background: #f9f9f9;
   border: 1px solid #dfdfdf;
   border-left: 2px solid #f52648;
   color: #f52648;
-  line-height: 36px; }
+  line-height: 36px;
+}
 .cart-content-middle .cart-content-middle-header table {
   margin: 0 10px;
   font-size: 14px;
@@ -74,25 +87,32 @@ a {
   height: 36px;
   width: 977px;
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 .cart-content-middle .cart-content-middle-header table .cart-information {
   width: 46%;
-  text-align: left; }
+  text-align: left;
+}
 .cart-content-middle .cart-content-middle-header table .cart-price {
   width: 12%;
-  text-align: center; }
+  text-align: center;
+}
 .cart-content-middle .cart-content-middle-header table .cart-num {
   width: 15%;
-  text-align: center; }
+  text-align: center;
+}
 .cart-content-middle .cart-content-middle-header table .cart-sum {
   width: 15%;
-  text-align: center; }
+  text-align: center;
+}
 .cart-content-middle .cart-content-middle-header table .cart-operation {
-  text-align: center; }
+  text-align: center;
+}
 
 /* 商品拼接部分 */
 .cart-content-middle-item {
-  border: 1px solid #dfdfdf; }
+  border: 1px solid #dfdfdf;
+}
 .cart-content-middle-item table {
   margin: 0 10px;
   font-size: 14px;
@@ -103,9 +123,11 @@ a {
   margin-top: -1px;
   margin-bottom: 25px;
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 .cart-content-middle-item table tr {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 /* 第一块商品信息 */
 .cart-information1 {
@@ -113,46 +135,56 @@ a {
   text-align: left;
   height: 90px;
   /* 商品图片 */
-  /* 商品主要说明文字 */ }
+  /* 商品主要说明文字 */
+}
 .cart-information1 .cart-information1-pic {
   float: left;
   box-shadow: 0 1px 2px #dfdfdf;
   position: relative;
-  margin: 20px 0; }
+  margin: 20px 0;
+}
 .cart-information1 .cart-information1-pic img {
   width: 58px;
-  height: 74px; }
+  height: 74px;
+}
 .cart-information1 .cart-information1-info {
   float: left;
   margin-left: 35px;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 .cart-information1 .cart-information1-info .cart-information1-info-name {
   width: 240px;
   height: 40px;
   line-height: 20px;
   overflow: hidden;
-  margin-top: 5px; }
+  margin-top: 5px;
+}
 .cart-information1 .cart-information1-info .cart-information1-info-size {
   width: 240px;
   height: 20px;
   line-height: 20px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* 单价 */
 .cart-price1 {
   width: 120px;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 .cart-price1 span {
-  display: block; }
+  display: block;
+}
 .cart-price1 span b {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 /* 数量 */
 .cart-num1 {
   width: 138px;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 .cart-num1 .quantity {
   position: relative;
   padding: 0 23px;
@@ -164,7 +196,8 @@ a {
   box-shadow: 0 0 1px #dfdfdf;
   /* 左边减号 */
   /* 中间输入框 */
-  /* 右边加号 */ }
+  /* 右边加号 */
+}
 .cart-num1 .quantity .quantity-l {
   position: absolute;
   top: 0;
@@ -174,7 +207,8 @@ a {
   border-right: 1px solid #e3e2e2;
   font-weight: 700;
   font-size: 18px;
-  line-height: 20px; }
+  line-height: 20px;
+}
 .cart-num1 .quantity .quantity-l-a {
   position: absolute;
   top: 0;
@@ -184,13 +218,15 @@ a {
   border-right: 1px solid #e3e2e2;
   font-weight: 700;
   font-size: 18px;
-  line-height: 20px; }
+  line-height: 20px;
+}
 .cart-num1 .quantity input {
   width: 28px;
   border: none;
   height: 22px;
   line-height: 22px;
-  text-align: center; }
+  text-align: center;
+}
 .cart-num1 .quantity .quantity-r {
   position: absolute;
   top: 0;
@@ -200,7 +236,8 @@ a {
   border-left: 1px solid #e3e2e2;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px; }
+  line-height: 20px;
+}
 .cart-num1 .quantity .quantity-r-a {
   position: absolute;
   top: 0;
@@ -210,44 +247,52 @@ a {
   border-left: 1px solid #e3e2e2;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px; }
+  line-height: 20px;
+}
 
 /* 小计 */
 .cart-sum1 {
   width: 140px;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 .cart-sum1 .cart-sum1-price {
-  color: #f52648; }
+  color: #f52648;
+}
 
 /* 操作 */
 .cart-operation1 {
   vertical-align: middle;
   text-align: center;
   width: 120px;
-  text-align: center; }
+  text-align: center;
+}
 .cart-operation1 a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 /* 下面运费部分 */
 .cart-content-middle-footer {
   background: #f9f9f9;
   border: 1px solid #e3e2e2;
   border-top: none;
-  padding: 10px 0; }
+  padding: 10px 0;
+}
 .cart-content-middle-footer p {
   height: 24px;
   line-height: 24px;
   margin: 5px 15px;
   font-size: 14px;
-  color: #9f9f9f; }
+  color: #9f9f9f;
+}
 .cart-content-middle-footer p span {
   background: #999;
   padding: 0 15px;
   margin-right: 15px;
   height: 24px;
   display: inline-block;
-  color: #fff; }
+  color: #fff;
+}
 
 /* 结算部分 */
 .cart-content-bottom {
@@ -257,7 +302,8 @@ a {
   margin: 20px 0;
   overflow: hidden;
   background: #fdfcf8;
-  border-bottom: 1px solid gray; }
+  border-bottom: 1px solid gray;
+}
 .cart-content-bottom .cart-jiesuan {
   margin: 15px 15px 0;
   line-height: 22px;
@@ -266,29 +312,95 @@ a {
   border-bottom: 1px dotted #cccbc6;
   width: 968px;
   font-weight: bold;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 /*结算的钱  */
 .cart-money {
   width: 100%;
   overflow: hidden;
   color: #525252;
-  line-height: 40px; }
+  line-height: 40px;
+}
 .cart-money .cart-money-pay {
   width: 220px;
   margin-right: 40px;
   float: right;
-  height: 40px; }
+  height: 40px;
+}
 
 /* 结算数字 */
 .cart-money-num {
-  float: left; }
+  float: left;
+}
 .cart-money-num b {
-  color: red; }
+  color: red;
+}
 
 .cart-money-sum {
   float: right;
   color: #f52648;
-  font-size: 14px; }
+  font-size: 14px;
+}
+
+/* 没有物品时 */
+.hiden-car {
+  width: 1000px;
+  margin: 0 auto;
+}
+.hiden-car .car-left {
+  width: 97px;
+  height: 97px;
+  margin: 90px 90px 0 50px;
+  background: url(../img/cart.png) no-repeat 0 -97px;
+  float: left;
+}
+.hiden-car .car-right {
+  width: 720px;
+  margin-top: 50px;
+  line-height: 2.8;
+  float: right;
+}
+.hiden-car .car-right h1 {
+  font-size: 24px;
+  color: #ccc;
+  font-weight: 700;
+}
+.hiden-car .car-right .car-back a {
+  width: 200px;
+  height: 48px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px;
+  cursor: pointer;
+  background: #f52648;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+.hiden-car .car-right .car-search {
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 446px;
+  height: 26px;
+  margin: 20px 0;
+  position: relative;
+}
+.hiden-car .car-right .car-search .car-search-button1 {
+  width: 26px;
+  height: 26px;
+  border: none;
+  vertical-align: middle;
+  background: url(../img/cart.png) no-repeat -1px -270px;
+  float: right;
+  cursor: pointer;
+}
+.hiden-car .car-right .car-search .car-search-button2 {
+  width: 419px;
+  height: 26px;
+  text-indent: 6px;
+  border: none;
+  float: left;
+}
 
 /*# sourceMappingURL=cart.css.map */

@@ -38,9 +38,12 @@
 	kong();
 	function kong(){
 		if(getcookie('cookiesid') && getcookie('cookienum')){
-			$('.empty-cart').hide();//cookie存在，购物车有商品，隐藏盒子。
+			$('.hiden-car').hide();//cookie存在，购物车有商品，隐藏盒子。
+			$('.cart-content').show();
 		}else{
-			$('.empty-cart').show();
+			$('.hiden-car').show();
+			$('.cart-content').hide();
+
 		}
 	}
 	
