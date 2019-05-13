@@ -1,11 +1,26 @@
-! function() {
+!function() {
+	
+
 	//1.获取sid
 	var picid = location.search.substring(1).split('=')[1];
-	
+	var $head_load = new Promise(function(resolve, reject) {
+            $('header').load('index.html header', () => {
+                resolve("header加载完成");
+            })
+        })
+        var $foot_load = new Promise(function(resolve, reject) {
+            $('.footer').load('index.html .footer', () => {
+                resolve("footer加载完成");
+            })
+        })
+        Promise.all([$head_load, $foot_load]).then(() => {
+			$.getScript("http://10.31.163.69/shop/src/script/js/headerlogin.js")
+
+            })
 
 	//2.将当前的id传给后端获取对应的数据
 	$.ajax({
-		url: '../php/detail.php',
+		url: 'http://10.31.163.69/shop/php/detail.php',
 		data: {
 			sid: picid
 		},

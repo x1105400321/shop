@@ -1,8 +1,32 @@
 !function(){
+
+        var $head_load = new Promise(function(resolve, reject) {
+            $('header').load('index.html .header-bar', () => {
+                resolve("header加载完成");
+            })
+        })
+        var $foot_load = new Promise(function(resolve, reject) {
+            $('footer').load('index.html .footer-bottom', () => {
+                resolve("footer加载完成");
+            })
+        })
+        Promise.all([$head_load, $foot_load]).then(() => {
+                $.getScript("http://10.31.163.69/shop/src/script/js/headerlogin.js")
+                
+            })
+
+
+
+
+	// $('header').load('index.html .header-bar');
+	// $('footer').load('index.html .footer-bottom');
+
+
+
 	//1.渲染商品列表, 传入两个参数，一个id和数量，根据id和数量渲染整个可见的列表.
 	function goodslist(id,count){
 		$.ajax({
-			url:'../php/indexdata.php',//获取所有的接口数据
+			url:'http://10.31.163.69/shop/php/indexdata.php',//获取所有的接口数据
 			dataType:'json'
 		}).done(function(data){
 			$.each(data,function(index,value){

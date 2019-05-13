@@ -11,7 +11,7 @@
         var $password=$('#password').val();
         $.ajax({
             type:'post',
-            url:'../php/login.php',
+            url:'http://10.31.163.69/shop/php/login.php',
             data:{//将用户名和密码传输给后端
                 name:$username,
                 pass:$password
@@ -22,7 +22,7 @@
                     $('#password').val('');
                 }else{//成功,存cookie,跳转到首页
                     addCookie('UserName',$username,7);
-                    location.href='index.html';
+                    location.href='http://10.31.163.69/shop/src/index.html';
                 }
             }
         })

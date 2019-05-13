@@ -69,7 +69,7 @@
                         </div>
                     </li>
                 </ul>
-                <span class="welcome">欢迎来到乐蜂，请&nbsp;<a href="login.html">登陆</a>&nbsp;|&nbsp;<a href="registor.html">免费注册</a></span>
+                <span class="welcome">欢迎来到乐蜂，请&nbsp;<a href="http://10.31.163.69/shop/src/login.html">登陆</a>&nbsp;|&nbsp;<a href="http://10.31.163.69/shop/src/registor.html">免费注册</a></span>
                 <span class="show-welcome">
                         嗡，欢迎来乐蜂，
                         <a href="#" class="welcome-name"></a>
@@ -115,7 +115,7 @@
         <!-- 搜索框部分 -->
         <div class="header-main">
             <div class="logo">
-                <a href="#"></a>
+                <a href="http://10.31.163.69/shop/src/index.html"></a>
             </div>
             <div class="search">
                 <div class="input">
@@ -132,11 +132,11 @@
                     </p>
                 </div>
             </div>
-            <!-- 删链接 -->
-            <a href="cart.html">
+            
+            <a href="http://10.31.163.69/shop/src/cart.html">
             <div class="cart">
                 <div class="cart-btn">
-                    <strong>0</strong>
+                    
                 </div>
             </div>
         </a>
@@ -686,7 +686,7 @@
                     </div>
                 </div>
                 <div class="header-main-bar-center">
-                    <a href="#">首页</a>
+                    <a href="http://10.31.163.69/shop/src/index.html">首页</a>
                     <a href="#">蜂购全球</a>
                 </div>
                 <div class="header-main-bar-right">
@@ -990,145 +990,149 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-    <script src="script/js/index.js"></script>
+   
     <script src="script/thirdplugins/jquery.lazyload.js"></script>
+    <script src="script/js/index.js"></script>
+    <script src="script/js/ban.js"></script>
+    <script src="script/js/headerlogin.js"></script>
     <script>
-     function addCookie(key,value,day){
-        var date=new Date();//创建日期对象
-        date.setDate(date.getDate()+day);//过期时间：获取当前的日期+天数，设置给date
-        document.cookie=key+'='+encodeURI(value)+';expires='+date;//添加cookie，设置过期时间
-    }
-    function getCookie(key){
-        var str=decodeURI(document.cookie);
-        var arr=str.split('; ');
-        for(var i=0;i<arr.length;i++){
-            var arr1=arr[i].split('=');
-             if(arr1[0]==key){
-                return arr1[1];
-            }
-        }
-    }
-    function delCookie(key,value){
-        addCookie(key,value,-1);//添加的函数,将时间设置为过去时间
-    }
+    //  function addCookie(key,value,day){
+    //     var date=new Date();//创建日期对象
+    //     date.setDate(date.getDate()+day);//过期时间：获取当前的日期+天数，设置给date
+    //     document.cookie=key+'='+encodeURI(value)+';expires='+date;//添加cookie，设置过期时间
+    // }
+    // function getCookie(key){
+    //     var str=decodeURI(document.cookie);
+    //     var arr=str.split('; ');
+    //     for(var i=0;i<arr.length;i++){
+    //         var arr1=arr[i].split('=');
+    //          if(arr1[0]==key){
+    //             return arr1[1];
+    //         }
+    //     }
+    // }
+    // function delCookie(key,value){
+    //     addCookie(key,value,-1);//添加的函数,将时间设置为过去时间
+    // }
     
     
-    //显示隐藏
-    $(function(){
-        if(getCookie('UserName')){
-            $('.welcome').hide();
-            $('.show-welcome').show().find('.welcome-name').html(getCookie('UserName'));
-        }
-        $('.show-welcome .welcome-close').on('click',function(){
-            delCookie('UserName','',-1);
-            $('.show-welcome').hide();
-            $('.welcome').show();
-        });
-    });
+    // //显示隐藏
+    // $(function(){
+    //     if(getCookie('UserName')){
+    //         $('.welcome').hide();
+    //         $('.show-welcome').show().find('.welcome-name').html(getCookie('UserName'));
+    //     }
+    //     $('.show-welcome .welcome-close').on('click',function(){
+    //         delCookie('UserName','',-1);
+    //         $('.show-welcome').hide();
+    //         $('.welcome').show();
+    //     });
+    // });
 
 
-    !function(){
-	//1.拼接数据
-	$.ajax({
-		url:'../php/indexdata.php',
-		dataType:'json'
-	}).done(function(data){
-		var $content='<div class="bkcx-content">';
-            // <img src="${value.url}">
-		$.each(data,function(index,value){
-            $content+=`
-            <div class="bkcx-content-item">
-            <dl>
-                    <dt>
-                        <a href="details.html?sid=${value.sid}" target="_blank">
-                            <img class="lazy" data-original="${value.url}" width="200" height="243">
-                        </a>
-                    </dt>
-                    <dd class="bkcx-content-item-dd1">
-                        <b>${value.count}折/</b>
-                        <a href="#" title="${value.title}">${value.title}</a>
-                    </dd>
-                    <dd class="bkcx-content-item-dd2">
-                        <span>¥${value.price}</span>
-                        <b> ¥${value.oprice}</b>
-                        <a href="details.html?sid=${value.sid}" target="_blank">加入购物车</a>
-                    </dd>
-                </dl>
-                </div>
-            `;
+//     !function(){
+// 	//1.拼接数据
+// 	$.ajax({
+// 		url:'../php/indexdata.php',
+// 		dataType:'json'
+// 	}).done(function(data){
+// 		var $content='<div class="bkcx-content">';
+//             // <img src="${value.url}">
+// 		$.each(data,function(index,value){
+//             $content+=`
+//             <div class="bkcx-content-item">
+//             <dl>
+//                     <dt>
+//                         <a href="details.html?sid=${value.sid}" target="_blank">
+//                             <img class="lazy" data-original="${value.url}" width="200" height="243">
+//                         </a>
+//                     </dt>
+//                     <dd class="bkcx-content-item-dd1">
+//                         <b>${value.count}折/</b>
+//                         <a href="#" title="${value.title}">${value.title}</a>
+//                     </dd>
+//                     <dd class="bkcx-content-item-dd2">
+//                         <span>¥${value.price}</span>
+//                         <b> ¥${value.oprice}</b>
+//                         <a href="details.html?sid=${value.sid}" target="_blank">加入购物车</a>
+//                     </dd>
+//                 </dl>
+//                 </div>
+//             `;
         
-		});
-		$content+='</div>';
-        $('.bkcx').append($content);
-        $(function() {
-				$("img.lazy").lazyload({
-					effect: "fadeIn"
-				});
-			});
-    });
+// 		});
+// 		$content+='</div>';
+//         $('.bkcx').append($content);
+//         /* 懒加载 */
+//         $(function() {
+// 				$("img.lazy").lazyload({
+// 					effect: "fadeIn"
+// 				});
+// 			});
+//     });
     
-    /* 轮播图 */
-    /* 获取元素 */
-    /* 整个banner盒子 */
-    var $ban = $('.banner');
-    /* 轮播图片列表 */
-    var $picUl = $('.lunboul');
-    /* 每张轮播图片 */
-    var $picLi =$('.lunboul li');
-    /* 轮播按钮列表 */
-    var $btnOl=$('lunbool');
-    /*  轮播按钮*/
-    var $btnLi = $('.lunbool li');
-    var $num = 0;
-    var $timer = null;
-    var $lunbo = null;
-    /* 点击按钮图片变化 */
-    $btnLi.on('click',function(){
-        $num = $(this).index();
-        $(this).addClass('active').siblings('li').removeClass('active');
-        var $picLiNow = $picLi.eq($(this).index());
-        $picLiNow.animate({
-            zIndex: 1,
-            opacity:1
-        },666).siblings().animate({
-            zIndex:0,
-            opacity:0
+//     /* 轮播图 */
+//     /* 获取元素 */
+//     /* 整个banner盒子 */
+//     var $ban = $('.banner');
+//     /* 轮播图片列表 */
+//     var $picUl = $('.lunboul');
+//     /* 每张轮播图片 */
+//     var $picLi =$('.lunboul li');
+//     /* 轮播按钮列表 */
+//     var $btnOl=$('lunbool');
+//     /*  轮播按钮*/
+//     var $btnLi = $('.lunbool li');
+//     var $num = 0;
+//     var $timer = null;
+//     var $lunbo = null;
+//     /* 点击按钮图片变化 */
+//     $btnLi.on('click',function(){
+//         $num = $(this).index();
+//         $(this).addClass('active').siblings('li').removeClass('active');
+//         var $picLiNow = $picLi.eq($(this).index());
+//         $picLiNow.animate({
+//             zIndex: 1,
+//             opacity:1
+//         },666).siblings().animate({
+//             zIndex:0,
+//             opacity:0
 
-        },666);
-    })
-    /* 定时器设置自动播放函数 */
-    $lunbo = function(){
+//         },666);
+//     })
+//     /* 定时器设置自动播放函数 */
+//     $lunbo = function(){
         
-        $num++;
-        if($num<4){
-            $num =$num;
-        }else{
-            $num=0;
+//         $num++;
+//         if($num<4){
+//             $num =$num;
+//         }else{
+//             $num=0;
           
-        };
-        $btnLi.eq($num).addClass('active').siblings().removeClass('active');
-            $picLi.eq($num).animate({
-            zIndex: 1,
-            opacity:1
-        },666).siblings().animate({
-            zIndex:0,
-            opacity:0
+//         };
+//         $btnLi.eq($num).addClass('active').siblings().removeClass('active');
+//             $picLi.eq($num).animate({
+//             zIndex: 1,
+//             opacity:1
+//         },666).siblings().animate({
+//             zIndex:0,
+//             opacity:0
 
-        },666);
+//         },666);
 
         
-    }
+//     }
 
-        /*设置定时器 */
-    $timer = setInterval($lunbo, 2000);
-        /* 移入移出开关定时器 */
-        $picUl.hover(function(){
-           clearInterval($timer);
-        },function(){
-    $timer = setInterval($lunbo, 2000);
+//         /*设置定时器 */
+//     $timer = setInterval($lunbo, 2000);
+//         /* 移入移出开关定时器 */
+//         $picUl.hover(function(){
+//            clearInterval($timer);
+//         },function(){
+//     $timer = setInterval($lunbo, 2000);
             
-        })
-}();
+//         })
+// }();
 
 
 

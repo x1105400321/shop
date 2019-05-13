@@ -110,7 +110,6 @@ var $send=$('.send-select ul li a');
   })(jQuery);
 
 
-// /* 获取本地cookie给到欢迎框 */
 
 //   ;(function($){
 //     function addCookie(key,value,day){
@@ -145,8 +144,6 @@ var $send=$('.send-select ul li a');
 //             $('.welcome').show();
 //         });
 //     });
-
+    
 //   })(jQuery);
-
-
-/* 渲染结构 */
+  

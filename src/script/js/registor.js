@@ -8,7 +8,7 @@
                     minlength: 2,
                     maxlength: 10,
                     remote: {//将前端的name给后端
-                        url: "../php/reg.php",     //后台处理程序
+                        url: "http://10.31.163.69/shop/php/reg.php",     //后台处理程序
                         type: "post"               //数据发送方式
                     }
                 },
