@@ -1,4 +1,4 @@
-;(function(){
+;(function($){
     function addCookie(key,value,day){
         var date=new Date();//创建日期对象
         date.setDate(date.getDate()+day);//过期时间：获取当前的日期+天数，设置给date
@@ -32,5 +32,5 @@
         });
     });
   
-})();
+})(jQuery);
        

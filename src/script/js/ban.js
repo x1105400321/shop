@@ -1,4 +1,4 @@
-;(function(){
+;(function($){
     //1.拼接数据
     $.ajax({
         url:'http://10.31.163.69/shop/php/indexdata.php',
@@ -11,18 +11,18 @@
             <div class="bkcx-content-item">
             <dl>
                     <dt>
-                        <a href="details.html?sid=${value.sid}" target="_blank">
+                        <a href="http://10.31.163.69/shop/src/details.html?sid=${value.sid}" target="_blank">
                             <img class="lazy" data-original="${value.url}" width="200" height="243">
                         </a>
                     </dt>
                     <dd class="bkcx-content-item-dd1">
                         <b>${value.count}折/</b>
-                        <a href="#" title="${value.title}">${value.title}</a>
+                        <a href="http://10.31.163.69/shop/src/details.html?sid=${value.sid}" target="_blank" title="${value.title}">${value.title}</a>
                     </dd>
                     <dd class="bkcx-content-item-dd2">
                         <span>¥${value.price}</span>
                         <b> ¥${value.oprice}</b>
-                        <a href="details.html?sid=${value.sid}" target="_blank">加入购物车</a>
+                        <a href="http://10.31.163.69/shop/src/details.html?sid=${value.sid}" target="_blank" target="_blank">加入购物车</a>
                     </dd>
                 </dl>
                 </div>
@@ -72,7 +72,7 @@
     $lunbo = function(){
         
         $num++;
-        if($num<4){
+        if($num<$btnLi.length + 1){
             $num =$num;
         }else{
             $num=0;
@@ -94,19 +94,24 @@
         /*设置定时器 */
     $timer = setInterval($lunbo, 2000);
         /* 移入移出开关定时器 */
-        $picUl.hover(function(){
-           clearInterval($timer);
-        },function(){
-    $timer = setInterval($lunbo, 2000);
+    //     $picUl.hover(function(){
+    //        clearInterval($timer);
+    //     },function(){
+    // $timer = setInterval($lunbo, 2000);
             
-        })
-
+    //     })
+        $ban.hover(function(){
+            clearInterval($timer);
+         },function(){
+     $timer = setInterval($lunbo, 2000);
+             
+         })
 
 
 
 
       
-})();
+})(jQuery);
 
 
 

@@ -396,12 +396,12 @@ li:hover .order-show {
   cursor: pointer;
   margin-top: 40px;
 }
-.cart-btn strong {
+.cart-btn b {
   position: absolute;
-  right: 20px;
+  right: 15px;
   top: 53px;
   color: white;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 /* 底部导航条 */
