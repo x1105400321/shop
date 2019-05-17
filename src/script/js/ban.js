@@ -11,18 +11,18 @@
             <div class="bkcx-content-item">
             <dl>
                     <dt>
-                        <a href="http://10.31.163.69/shop/src/details.html?sid=${value.sid}" target="_blank">
+                        <a href="./details.html?sid=${value.sid}" target="_blank">
                             <img class="lazy" data-original="${value.url}" width="200" height="243">
                         </a>
                     </dt>
                     <dd class="bkcx-content-item-dd1">
                         <b>${value.count}折/</b>
-                        <a href="http://10.31.163.69/shop/src/details.html?sid=${value.sid}" target="_blank" title="${value.title}">${value.title}</a>
+                        <a href="./details.html?sid=${value.sid}" target="_blank" title="${value.title}">${value.title}</a>
                     </dd>
                     <dd class="bkcx-content-item-dd2">
                         <span>¥${value.price}</span>
                         <b> ¥${value.oprice}</b>
-                        <a href="http://10.31.163.69/shop/src/details.html?sid=${value.sid}" target="_blank" target="_blank">加入购物车</a>
+                        <a href="./details.html?sid=${value.sid}" target="_blank" target="_blank">加入购物车</a>
                     </dd>
                 </dl>
                 </div>

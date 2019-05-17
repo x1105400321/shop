@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2019-05-09 11:23:25
+Date: 2019-05-16 17:13:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -65,7 +65,7 @@ CREATE TABLE `user` (
   `password` varchar(32) NOT NULL,
   `regdate` datetime NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
@@ -81,3 +81,6 @@ INSERT INTO `user` VALUES ('8', '11', '96e79218965eb72c92a549dd5a330112', '2019-
 INSERT INTO `user` VALUES ('9', '111111', '96e79218965eb72c92a549dd5a330112', '2019-05-08 21:24:37');
 INSERT INTO `user` VALUES ('10', '111111111', '96e79218965eb72c92a549dd5a330112', '2019-05-08 22:02:39');
 INSERT INTO `user` VALUES ('11', '77', '96e79218965eb72c92a549dd5a330112', '2019-05-09 08:25:58');
+INSERT INTO `user` VALUES ('12', 'aaa', '0b4e7a0e5fe84ad35fb5f95b9ceeac79', '2019-05-10 20:31:54');
+INSERT INTO `user` VALUES ('13', 'aa', '0b4e7a0e5fe84ad35fb5f95b9ceeac79', '2019-05-13 21:31:09');
+INSERT INTO `user` VALUES ('14', '666', '96e79218965eb72c92a549dd5a330112', '2019-05-16 16:25:00');

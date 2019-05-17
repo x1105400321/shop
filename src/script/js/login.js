@@ -22,7 +22,7 @@
                     $('#password').val('');
                 }else{//成功,存cookie,跳转到首页
                     addCookie('UserName',$username,7);
-                    location.href='http://10.31.163.69/shop/src/index.html';
+                    location.href='./index.html';
                 }
             }
         })
